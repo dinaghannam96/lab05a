@@ -115,12 +115,20 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(multArr) { //eslint-disable-line
+function multiplyArray(testArray) { //eslint-disable-line
+    let newarray = testArray;// pass array to new variable
+    let mulAB= multiply(newarray[0],newarray[1]);// return an array
+    let mulABvalue = mulAB[0]; // take first value from ret
+    let mulABC = multiply(mulABvalue,newarray[2]); // sum first value with the thierd value in the  first array // return array 
+    let mulABCvalue = mulABC[0]; 
+    let arr = [mulABCvalue ,"the multi of all values using multi function is"+"value"+newarray[0]+"and "+"value"+newarray[1]+"and "+"value"+newarray[2]+" the multi is "+mulABCvalue]; 
+    return arr ;
+ 
 
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
